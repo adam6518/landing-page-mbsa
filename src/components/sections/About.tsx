@@ -1,9 +1,10 @@
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 const values = [
   "Menjaga konsistensi kualitas dan kesegaran produk",
   "Memantau harga secara berkala",
-  "Mengutamakan layanan pengadaan yang responsif"
+  "Mengutamakan layanan pengadaan yang responsif",
 ];
 
 export default function About() {
@@ -11,13 +12,17 @@ export default function About() {
     <section className="content-section about-section" id="tentang-kami">
       <div className="shell about-grid">
         <div className="section-heading">
-          <span className="section-kicker"><span /> TENTANG MBSA</span>
-          <h2>Membangun kemitraan melalui <em>kualitas dan kepercayaan.</em></h2>
+          <span className="section-kicker">
+            <span /> TENTANG MBSA
+          </span>
+          <h2>
+            Membangun kemitraan melalui <em>kualitas dan kepercayaan.</em>
+          </h2>
         </div>
         <div className="about-copy">
           <p className="section-lead">
-            PT. Mitra Boga Sejahtera Abadi berfokus pada penyediaan bahan makanan
-            untuk kebutuhan industri, dengan komitmen terhadap kualitas,
+            PT. Mitra Boga Sejahtera Abadi berfokus pada penyediaan bahan
+            makanan untuk kebutuhan industri, dengan komitmen terhadap kualitas,
             konsistensi harga, dan layanan pengadaan.
           </p>
           <p>
@@ -27,17 +32,33 @@ export default function About() {
           </p>
           <ul className="check-list">
             {values.map((value) => (
-              <li key={value}><CheckCircle2 size={18} />{value}</li>
+              <li key={value}>
+                <CheckCircle2 size={18} />
+                {value}
+              </li>
             ))}
           </ul>
-          <a className="text-link" href="#kontak">Diskusikan kebutuhan Anda <ArrowUpRight size={17} /></a>
+          <a className="text-link" href="#kontak">
+            Diskusikan kebutuhan Anda <ArrowUpRight size={17} />
+          </a>
         </div>
       </div>
       <div className="shell about-note">
-        <div className="about-note-mark">MB</div>
+        <div className="about-note-logo">
+          <Image
+            src="/images/logo-mbsa.png"
+            alt="Logo PT. Mitra Boga Sejahtera Abadi"
+            width={300}
+            height={100}
+            className="about-logo-image"
+          />
+        </div>
         <div>
           <span className="note-label">VISI PERUSAHAAN</span>
-          <p>Menjadi mitra usaha terpercaya dalam penyediaan bahan makanan segar berkualitas tinggi untuk kebutuhan industri.</p>
+          <p>
+            Menjadi mitra usaha terpercaya dalam penyediaan bahan makanan segar
+            berkualitas tinggi untuk kebutuhan industri.
+          </p>
         </div>
       </div>
     </section>

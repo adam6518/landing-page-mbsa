@@ -6,7 +6,7 @@ const products = [
   { name: "Scallop Ikan", category: "Produk olahan ikan", kind: "fish" },
   { name: "Drumstick", category: "Produk olahan", kind: "package" },
   { name: "Fish Roll", category: "Produk olahan ikan", kind: "fish" },
-  { name: "Jagung Pipil", category: "Bahan pangan", kind: "grain" }
+  { name: "Jagung Pipil", category: "Bahan pangan", kind: "grain" },
 ];
 
 function ProductIcon({ kind }: { kind: string }) {
@@ -16,20 +16,27 @@ function ProductIcon({ kind }: { kind: string }) {
 }
 
 export default function Products() {
-  const whatsapp = "https://wa.me/6288808975035?text=" +
-    encodeURIComponent("Halo PT. MBSA, saya ingin meminta katalog produk dan informasi harga.");
+  const whatsapp =
+    "https://wa.me/6288808975035?text=" +
+    encodeURIComponent(
+      "Halo PT. MBSA, saya ingin meminta katalog produk dan informasi harga.",
+    );
 
   return (
     <section className="content-section products-section" id="produk">
       <div className="shell">
         <div className="section-topline">
           <div className="section-heading">
-            <span className="section-kicker"><span /> PRODUK PILIHAN</span>
-            <h2>Solusi produk untuk <em>kebutuhan usaha.</em></h2>
+            <span className="section-kicker">
+              <span /> PRODUK PILIHAN
+            </span>
+            <h2>
+              Produk Pilihan untuk <em>Kebutuhan Industri.</em>
+            </h2>
           </div>
           <p className="section-side-copy">
-            Berikut beberapa produk yang tercantum dalam company profile MBSA.
-            Hubungi kami untuk katalog lengkap dan informasi ketersediaan.
+            Mitra Boga Sejahtera Abadi menyediakan beragam produk segar
+            berkualitas yang sesuai dengan skala dan standar kualitas Industri.
           </p>
         </div>
 
@@ -39,14 +46,21 @@ export default function Products() {
               <div className={`product-art product-art-${index + 1}`}>
                 <span className="product-number">0{index + 1}</span>
                 <ProductIcon kind={product.kind} />
-                <span className="product-art-caption">MBSA · PRODUCT RANGE</span>
+                <span className="product-art-caption">
+                  MBSA · PRODUCT RANGE
+                </span>
               </div>
               <div className="product-info">
                 <div>
                   <span className="product-category">{product.category}</span>
                   <h3>{product.name}</h3>
                 </div>
-                <a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Tanyakan ${product.name} melalui WhatsApp`}>
+                <a
+                  href={whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Tanyakan ${product.name} melalui WhatsApp`}
+                >
                   <ArrowUpRight size={19} />
                 </a>
               </div>
@@ -56,10 +70,18 @@ export default function Products() {
 
         <div className="catalog-cta">
           <div>
-            <span className="note-label">BUTUH INFORMASI LEBIH LENGKAP?</span>
+            <span className="note-label">
+              BUTUH INFORMASI LEBIH LANJUT ? HUBUNGI KAMI UNTUK INFORMASI
+              KATALOG PRODUK DAN HARGA PENAWARAN.
+            </span>
             <h3>Minta katalog dan penawaran produk.</h3>
           </div>
-          <a className="button button-primary" href={whatsapp} target="_blank" rel="noreferrer">
+          <a
+            className="button button-primary"
+            href={whatsapp}
+            target="_blank"
+            rel="noreferrer"
+          >
             Minta Katalog Lengkap <ArrowUpRight size={17} />
           </a>
         </div>

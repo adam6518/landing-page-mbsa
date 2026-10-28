@@ -3,13 +3,14 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Tentang Kami", href: "#tentang-kami" },
   { label: "Produk", href: "#produk" },
   { label: "Keunggulan", href: "#keunggulan" },
   { label: "Partner", href: "#partner" },
-  { label: "Kontak", href: "#kontak" }
+  { label: "Kontak", href: "#kontak" },
 ];
 
 export default function Navbar() {
@@ -18,21 +19,27 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <nav className="navbar shell" aria-label="Navigasi utama">
-        <a className="brand" href="#beranda" aria-label="PT. MBSA — Beranda" onClick={() => setOpen(false)}>
-          <span className="brand-mark" aria-hidden="true">
-            <span className="brand-mark-top">M</span>
-            <span className="brand-mark-bottom">B</span>
-            <span className="brand-grain">✳</span>
-          </span>
-          <span className="brand-copy">
-            <strong>MITRA BOGA</strong>
-            <span>SEJAHTERA ABADI</span>
-          </span>
+        <a
+          className="brand"
+          href="#beranda"
+          aria-label="PT. MBSA — Beranda"
+          onClick={() => setOpen(false)}
+        >
+          <Image
+            src="/images/logo-mbsa.png"
+            alt="PT. Mitra Boga Sejahtera Abadi"
+            width={300}
+            height={100}
+            className="navbar-logo"
+            priority
+          />
         </a>
 
         <div className="desktop-nav">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="nav-link">{item.label}</a>
+            <a key={item.href} href={item.href} className="nav-link">
+              {item.label}
+            </a>
           ))}
         </div>
 
@@ -69,10 +76,15 @@ export default function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.045 }}
               >
-                {item.label}<ArrowUpRight size={16} />
+                {item.label}
+                <ArrowUpRight size={16} />
               </motion.a>
             ))}
-            <a href="#kontak" className="mobile-menu-cta" onClick={() => setOpen(false)}>
+            <a
+              href="#kontak"
+              className="mobile-menu-cta"
+              onClick={() => setOpen(false)}
+            >
               Hubungi Kami <ArrowUpRight size={16} />
             </a>
           </motion.div>
