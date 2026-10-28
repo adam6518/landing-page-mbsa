@@ -1538,3 +1538,38 @@ a {
     max-height: 70px;
   }
 }
+
+/* =========================================
+   FOOTER - OFFICIAL MBSA LOGO
+========================================= */
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.footer-logo-image {
+  display: block;
+  width: 180px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* Responsivitas tablet */
+@media (max-width: 900px) {
+  .footer-logo-image {
+    width: 170px;
+  }
+}
+
+/* Responsivitas mobile */
+@media (max-width: 600px) {
+  .footer-logo-image {
+    width: 160px;
+  }
+}
