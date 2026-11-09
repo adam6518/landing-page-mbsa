@@ -31,7 +31,7 @@ export default function Products() {
               <span /> PRODUK PILIHAN
             </span>
             <h2>
-              Produk Pilihan untuk <em>Kebutuhan Industri.</em>
+              Produk Pilihan untuk <em>Kebutuhan Industri & Pelayanan Anda.</em>
             </h2>
           </div>
           <p className="section-side-copy">

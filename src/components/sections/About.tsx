@@ -57,7 +57,7 @@ export default function About() {
           <span className="note-label">VISI PERUSAHAAN</span>
           <p>
             Menjadi mitra usaha terpercaya dalam penyediaan bahan makanan segar
-            berkualitas tinggi untuk kebutuhan industri.
+            berkualitas tinggi untuk kebutuhan industri dan pelayanan Anda.
           </p>
         </div>
       </div>

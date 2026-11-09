@@ -52,7 +52,7 @@ export default function Hero() {
             Bahan pangan berkualitas,
             <span className="headline-accent">
               {" "}
-              untuk bisnis yang terus tumbuh.
+              untuk bisnis yang terus bertumbuh.
             </span>
           </motion.h1>
 
